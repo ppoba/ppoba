@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  ppoba-backend:
+    image: amazoncorretto:11
+    container_name: ppoba-backend
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+    ports:
+      - "8989:8080"
+    volumes:
+      - ./build/libs/ppoba-0.0.1-SNAPSHOT.jar:/ppoba.jar
+    entrypoint: ["java", "-jar", "/ppoba.jar"]
