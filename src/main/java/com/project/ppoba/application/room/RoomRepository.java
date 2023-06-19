@@ -1,6 +1,5 @@
-package com.project.ppoba.repository;
+package com.project.ppoba.application.room;
 
-import com.project.ppoba.domain.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoomRepository extends JpaRepository<Room, Long> {

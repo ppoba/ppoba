@@ -1,6 +1,8 @@
-package com.project.ppoba.domain;
+package com.project.ppoba.application.room;
 
-import com.project.ppoba.domain.enums.Status;
+import com.project.ppoba.application.item.Item;
+import com.project.ppoba.core.BaseEntity;
+import com.project.ppoba.core.Status;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

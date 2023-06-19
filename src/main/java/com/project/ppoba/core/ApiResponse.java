@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class ApiResponse {
-    private java.lang.String message;
+    private String message;
     private Object data;
 
     public static ApiResponse ok(Object data) {

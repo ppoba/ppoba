@@ -1,5 +1,7 @@
-package com.project.ppoba.domain;
+package com.project.ppoba.application.vote;
 
+import com.project.ppoba.application.item.Item;
+import com.project.ppoba.core.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Getter
 //@Table(name = "VoteInfo")
-public class VoteInfo extends BaseEntity{
+public class VoteInfo extends BaseEntity {
 
     @NotNull
     private String uuid;

@@ -1,4 +1,4 @@
-package com.project.ppoba.controller;
+package com.project.ppoba.application.room;
 
 import com.project.ppoba.core.ApiResponse;
 import lombok.RequiredArgsConstructor;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class Controller {
-    @GetMapping ("/test")
-    public ApiResponse test(String name) {
+public class RoomController {
 
+    @GetMapping("/room/test")
+    public ApiResponse test(String name) {
         return ApiResponse.ok("hi " + name);
     }
 }

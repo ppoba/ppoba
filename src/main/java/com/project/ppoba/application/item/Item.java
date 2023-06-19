@@ -1,5 +1,7 @@
-package com.project.ppoba.domain;
+package com.project.ppoba.application.item;
 
+import com.project.ppoba.core.BaseEntity;
+import com.project.ppoba.application.room.Room;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

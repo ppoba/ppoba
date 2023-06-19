@@ -1,4 +1,4 @@
-package com.project.ppoba.domain;
+package com.project.ppoba.core;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

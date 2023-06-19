@@ -1,4 +1,4 @@
-package com.project.ppoba.domain.enums;
+package com.project.ppoba.core;
 
 public enum Status {
     IN_PROGRESS,
