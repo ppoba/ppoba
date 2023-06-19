@@ -1,5 +1,6 @@
 package com.project.ppoba.controller;
 
+import com.project.ppoba.core.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,9 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class Controller {
     @GetMapping ("/test")
-    public String test(String name) {
+    public ApiResponse test(String name) {
 
-        return "hi " + name;
+        return ApiResponse.ok("hi " + name);
     }
-
 }
