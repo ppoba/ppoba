@@ -18,7 +18,6 @@ public abstract class BaseEntity {
     private long id;
 
     @CreatedDate
-    @NotNull
     @Column(updatable = false)
     private LocalDateTime regDate;
 }
