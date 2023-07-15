@@ -1,8 +1,7 @@
 package com.project.ppoba.application.room;
 
 import com.project.ppoba.application.item.Item;
-import com.project.ppoba.core.BaseEntity;
-import com.project.ppoba.core.Status;
+import com.project.ppoba.core.common.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
