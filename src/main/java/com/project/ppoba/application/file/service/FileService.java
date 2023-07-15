@@ -9,9 +9,10 @@ import java.net.MalformedURLException;
 
 public interface FileService {
 
+    //TODO image Resize
     String upload(MultipartFile file) throws IOException;
 
     Resource imgDownload(String uuid) throws MalformedURLException;
 
-    //file Download 미구현
+    //TODO preview
 }
