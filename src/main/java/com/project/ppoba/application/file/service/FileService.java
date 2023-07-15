@@ -11,6 +11,7 @@ public interface FileService {
 
     String upload(MultipartFile file) throws IOException;
 
-    Resource download(String uuid) throws MalformedURLException;
+    Resource imgDownload(String uuid) throws MalformedURLException;
 
+    //file Download 미구현
 }

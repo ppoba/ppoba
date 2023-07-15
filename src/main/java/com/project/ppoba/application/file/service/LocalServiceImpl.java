@@ -4,6 +4,7 @@ import com.project.ppoba.application.file.domain.FileModel;
 import com.project.ppoba.application.file.repository.FileModelRepository;
 import com.project.ppoba.common.FileHelper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -16,15 +17,15 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.UUID;
 
+@Profile("local")
 @RequiredArgsConstructor
 @Transactional
 @Service
 public class LocalServiceImpl implements FileService {
-
-    private final String rootPath = System.getProperty("user.dir");
-    private final String fileDir = rootPath + "/files";
+    private final String fileDir = System.getProperty("user.dir") + "/files";
     private final FileModelRepository fileModelRepository;
 
     @Override
@@ -37,13 +38,13 @@ public class LocalServiceImpl implements FileService {
         FileModel fileModel = new FileModel(originalFilename, uuid, size, extension);
         fileModelRepository.save(fileModel);
 
-        file.transferTo(new File(fileDir + uuid));
+        file.transferTo(new File(fileDir, uuid));
 
         return uuid;
     }
 
     @Override
-    public Resource download(String uuid) throws MalformedURLException {
-        return new UrlResource("file:" + fileDir + uuid);
+    public Resource imgDownload(String uuid) throws MalformedURLException {
+        return new UrlResource("file:" + fileDir + "/" + uuid);
     }
 }

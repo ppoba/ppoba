@@ -30,7 +30,7 @@ public class FileController {
     public ResponseEntity<Resource> fileDownload(@PathVariable String uuid) throws MalformedURLException {
         if (StringUtils.isBlank(uuid)) throw new RuntimeException();
 
-        Resource resource = fileService.download(uuid);
+        Resource resource = fileService.imgDownload(uuid);
 
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("image/png"))
