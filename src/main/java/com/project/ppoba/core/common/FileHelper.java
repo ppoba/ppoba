@@ -1,4 +1,4 @@
-package com.project.ppoba.common;
+package com.project.ppoba.core.common;
 
 public class FileHelper {
     public static String extractExtension(String originFileName) {

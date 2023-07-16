@@ -1,6 +1,6 @@
 package com.project.ppoba.application.item;
 
-import com.project.ppoba.core.BaseEntity;
+import com.project.ppoba.core.common.BaseEntity;
 import com.project.ppoba.application.room.Room;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

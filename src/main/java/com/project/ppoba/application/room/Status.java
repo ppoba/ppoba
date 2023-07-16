@@ -1,4 +1,4 @@
-package com.project.ppoba.core;
+package com.project.ppoba.application.room;
 
 import lombok.Getter;
 

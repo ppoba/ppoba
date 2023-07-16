@@ -1,6 +1,6 @@
 package com.project.ppoba.application.file.domain;
 
-import com.project.ppoba.core.BaseEntity;
+import com.project.ppoba.core.common.BaseEntity;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;

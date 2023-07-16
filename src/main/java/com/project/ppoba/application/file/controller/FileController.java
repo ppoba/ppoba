@@ -1,6 +1,7 @@
 package com.project.ppoba.application.file.controller;
 
 import com.project.ppoba.application.file.service.FileService;
+import com.project.ppoba.core.common.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.io.Resource;
@@ -21,16 +22,16 @@ public class FileController {
     private final FileService fileService;
 
     @PostMapping("/file/upload")
-    public String fileUpload(@RequestPart  MultipartFile file) throws IOException {
+    public ApiResponse fileUpload(@RequestPart  MultipartFile file) throws IOException {
         if (file == null || file.isEmpty()) throw new RuntimeException();
 
-        return fileService.upload(file);
+        return ApiResponse.ok(fileService.upload(file));
     }
     @GetMapping("/file/original/{uuid}")
     public ResponseEntity<Resource> fileDownload(@PathVariable String uuid) throws MalformedURLException {
         if (StringUtils.isBlank(uuid)) throw new RuntimeException();
 
-        Resource resource = fileService.download(uuid);
+        Resource resource = fileService.imgDownload(uuid);
 
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("image/png"))
