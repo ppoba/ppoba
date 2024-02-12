@@ -15,14 +15,27 @@ services:
       MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: ppoba
       MYSQL_DATABASE: ppoba
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ppoba
+    networks:
+      - test_network
+
   ppoba-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: amazoncorretto:11
     container_name: ppoba-backend
-    restart: always
+#    restart: always
     environment:
       - SPRING_PROFILES_ACTIVE=test
     ports:
-      - "8990:8991"
+      - "9990:9991"
     volumes:
       - ./build/libs/ppoba-0.0.1-SNAPSHOT.jar:/ppoba.jar
     entrypoint: ["java", "-jar", "/ppoba.jar"]
+    networks:
+      - test_network
+
+networks:
+  test_network:
