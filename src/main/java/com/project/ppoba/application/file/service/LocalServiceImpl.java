@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.UUID;
 
-@Profile("local")
+@Profile({"local", "test"})
 @RequiredArgsConstructor
 @Transactional
 @Service

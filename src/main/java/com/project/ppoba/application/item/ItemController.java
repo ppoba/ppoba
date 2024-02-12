@@ -1,6 +1,6 @@
 package com.project.ppoba.application.item;
 
-import com.project.ppoba.core.ApiResponse;
+import com.project.ppoba.core.common.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

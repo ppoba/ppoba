@@ -1,9 +1,16 @@
 package com.project.ppoba.application.room;
 
+import com.project.ppoba.application.room.dto.RoomDetailDto;
+import com.project.ppoba.application.room.dto.RoomDto;
 import com.project.ppoba.core.common.ApiResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor

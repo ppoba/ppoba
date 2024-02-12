@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 // @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @SpringBootApplication
-@EnableJpaAuditing
 public class PpobaApplication {
 
 	public static void main(String[] args) {
