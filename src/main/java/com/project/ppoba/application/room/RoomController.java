@@ -46,5 +46,6 @@ public class RoomController {
                         .map(RoomDto::new)
                         .collect(Collectors.toList())
         );
+
     }
 }
